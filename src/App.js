@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import cards from './data/cards.json';
-import CollectionView from './components/CollectionView';
-import DeckView from './components/DeckView';
+import logo from './images/cratebind-logo.png';
 
 const Styles = styled.div`
-  .App {
+  .App-starter {
     text-align: center;
   }
 
@@ -21,9 +19,14 @@ class App extends Component {
   render() {
     return (
       <Styles>
-        <div className="App">
-          <CollectionView />
-          <DeckView />
+        <div className="App-starter">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <h1 className="App-title">React Starter</h1>
+          </header>
+          <p className="App-intro">
+            To get started, edit <code>src/App.js</code> and save to reload.
+          </p>
         </div>
       </Styles>
     );
