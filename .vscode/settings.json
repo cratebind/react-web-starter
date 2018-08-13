@@ -1,5 +1,5 @@
 {
-  "editor.formatOnSave": false,
-  "eslint.autoFixOnSave": false,
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
   "eslint.alwaysShowStatus": true
 }
