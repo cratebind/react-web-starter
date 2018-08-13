@@ -48,7 +48,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "lint": "eslint './src/**/*.js'",
-    "lint:fix": "eslint './src/**/*.js' --fix"
+    "lint:fix": "eslint \"./src/**.js\" --fix"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -104,7 +104,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run lint:fix"
     }
   },
   "lint-staged": {

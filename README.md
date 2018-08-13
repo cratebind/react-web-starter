@@ -105,21 +105,11 @@ Settings for VS Code are provided by default. These include helpful format-on-sa
 
 ## Git Hooks
 
+[Husky](https://github.com/typicode/husky/) is set up to auto-correct any minor style errors before making a git commit.
 
-```json
-{
-  // package.json
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
-  }
-}
-```
+If there are any major / syntax errors that can't be autofixed, they will be listed. These errors must be fixed before you're able to push up a branch.
 
+This measure is put in place to catch errors that would immediately fail in a CI. It also helps keep code style formatted and consistent.
 
 ## Deploying
 To build the static files for deployment, run `npm run build` and a `build` folder will be created with all the necessary assets.
