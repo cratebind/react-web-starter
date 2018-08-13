@@ -108,7 +108,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
+    "*.{js,css}": [
       "npm run lint:fix",
       "git add"
     ]
