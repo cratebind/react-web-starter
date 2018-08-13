@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import logo from "./images/cratebind-logo.png";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import logo from './images/cratebind-logo.png';
 
 const Styles = styled.div`
   .App-starter {
