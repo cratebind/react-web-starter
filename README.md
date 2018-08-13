@@ -76,7 +76,11 @@ This template comes without a state container on purpose. State containers shoul
 
 ## CSS
 
-Prefer to use [styled components](http://styled-components.com/) to help keep components self-contained. When creating a custom component that you intend to style, wrap it in a styled component `div`.
+Prefer to use [styled components](http://styled-components.com/) to help keep components self-contained.
+
+> NOTE: Do not add styled-components to a project that already has a system for CSS / SCSS. Instead, continue the existing approach. Having two systems fighting for CSS priority is an exercise in madness.
+
+When creating a custom component that you intend to style, wrap it in a styled component `div`.
 
 ```jsx
 import styled from 'styled-components';
@@ -100,7 +104,22 @@ All components should have unit tests using Jest.
 Settings for VS Code are provided by default. These include helpful format-on-save features using ES Lint and Prettier. They can be turned off if preferred, but are strongly encouraged as they help keep code formatted and standard across projects.
 
 ## Git Hooks
-TODO
+
+
+```json
+{
+  // package.json
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
+  }
+}
+```
+
 
 ## Deploying
 To build the static files for deployment, run `npm run build` and a `build` folder will be created with all the necessary assets.
