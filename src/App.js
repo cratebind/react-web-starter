@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import logo from './images/cratebind-logo.png';
+import React, { Component } from "react";
+import styled from "styled-components";
+import logo from "./images/cratebind-logo.png";
 
 const Styles = styled.div`
   .App-starter {
@@ -24,6 +24,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">React Starter</h1>
           </header>
+
           <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
