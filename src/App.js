@@ -16,7 +16,13 @@ const Styles = styled.div`
 `;
 
 class App extends Component {
+  state = {
+    started: true,
+  };
+
   render() {
+    const { started } = this.state;
+    console.log(started);
     return (
       <Styles>
         <div className="App-starter">
